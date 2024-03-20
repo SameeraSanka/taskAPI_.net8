@@ -24,9 +24,6 @@ namespace taskAPI.Controllers
         [HttpPut]
         public IActionResult UpdateTask()
         {
-            var somthingwentwrong = true;
-            if (somthingwentwrong)
-                return BadRequest();
             return Ok();
         }
 
