@@ -1,8 +1,9 @@
 ﻿using taskAPI.Models;
+using TaskAPI.Servises;
 
 namespace taskAPI.Servises
 {
-    public class TodoServise
+    public class TodoServise : ITodoRepository
     {
         //Get todos
         //to get all we can use ICollection, IEnumarable or List.

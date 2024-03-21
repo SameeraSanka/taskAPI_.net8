@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using taskAPI.Models;
 using taskAPI.Servises;
+using TaskAPI.Servises;
 
 namespace taskAPI.Controllers
 {
@@ -10,11 +10,11 @@ namespace taskAPI.Controllers
     public class ToDosController : ControllerBase
     {
 
-        private TodoServise _todoServise;
+        private readonly ITodoRepository _todoServise;
 
-        public ToDosController()
+        public ToDosController(ITodoRepository repository)
         {
-            _todoServise = new TodoServise();
+            _todoServise = repository;
         }
 
         [HttpGet ("{id?}")]
