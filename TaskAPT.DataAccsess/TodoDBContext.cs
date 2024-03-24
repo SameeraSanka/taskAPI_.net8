@@ -11,5 +11,15 @@ namespace TaskAPT.DataAccsess
     public class TodoDBContext : DbContext
     {
         public DbSet<Todo> Todos { get; set; }
+
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+
+            var connectionString = 
+            optionsBuilder.UseSqlServer(connectionString);
+        }
+
     }
+
 }
